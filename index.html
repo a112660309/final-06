@@ -4,27 +4,60 @@
     <meta charset="UTF-8">
     <title>我的出遊亂亂走</title>
     <style>
-        body { font-family: sans-serif; text-align: center; background-color: #f4f4f4; }
-        .map-container { width: 80%; max-width: 600px; margin: auto; }
-        /* 設定地圖滑鼠滑過顏色 */
-        path:hover { fill: #ffcc00; cursor: pointer; transition: 0.3s; }
-        path { fill: #ddd; stroke: #fff; stroke-width: 1; }
+        body { font-family: "Microsoft JhengHei", sans-serif; text-align: center; background-color: #f9f9f9; }
+        .map-box { max-width: 500px; margin: 20px auto; border: 5px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        img { width: 100%; height: auto; }
     </style>
 </head>
 <body>
 
     <h1>我的出遊亂亂走</h1>
-    <p>點擊縣市查看我的旅遊足跡</p>
+    <p>請點擊下方的縣市地圖進入遊記</p>
 
-    <div class="map-container">
-        <!-- 這裡放入你的 SVG 程式碼 -->
-        <svg viewBox="0 0 500 800">
-            <!-- 範例：高雄市的區塊 -->
-            <path id="kaohsiung" d="..." onclick="location.href='kaohsiung.html'" />
-            <!-- 範例：台南市的區塊 -->
-            <path id="tainan" d="..." onclick="location.href='tainan.html'" />
-            <!-- 其他縣市... -->
-        </svg>
+    <div class="map-box">
+        <!-- 這裡放入你的台灣全圖 -->
+        <img src="images/taiwan-map.jpg" usemap="#image-map">
+
+        <!-- 這些座標需要根據你的圖片大小調整 -->
+        <map name="image-map">
+            <area target="" alt="高雄市" title="高雄市" href="kaohsiung.html" coords="150,550,220,620" shape="rect">
+            <area target="" alt="台南市" title="台南市" href="tainan.html" coords="140,480,200,530" shape="rect">
+        </map>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>高雄出遊紀錄 - 我的出遊亂亂走</title>
+    <style>
+        body { font-family: "Microsoft JhengHei", sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        .admin-map { width: 100%; max-width: 400px; display: block; margin: 10px auto; }
+        .photo-gallery img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+        .back-btn { display: inline-block; padding: 10px 20px; background: #333; color: #fff; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn">← 回首頁</a>
+    
+    <h2>高雄市行政區域圖</h2>
+    <!-- 放入高雄的行政區地圖圖片 -->
+    <img src="images/kaohsiung-admin-map.png" class="admin-map" alt="高雄行政區圖">
+
+    <hr>
+
+    <h3>我的旅遊心情</h3>
+    <p>這裡可以輸入你在高雄亂亂走的文字感悟，例如：今天去了駁二，天氣非常好...</p>
+
+    <div class="photo-gallery">
+        <h3>精選照片</h3>
+        <!-- 這裡放你自己的出遊圖片 -->
+        <img src="images/my-kaohsiung-01.jpg" alt="高雄遊記照片1">
+        <img src="images/my-kaohsiung-02.jpg" alt="高雄遊記照片2">
     </div>
 
 </body>
