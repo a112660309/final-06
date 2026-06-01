@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>我的出遊亂亂走</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #f4f4f4; }
+        .map-container { width: 80%; max-width: 600px; margin: auto; }
+        /* 設定地圖滑鼠滑過顏色 */
+        path:hover { fill: #ffcc00; cursor: pointer; transition: 0.3s; }
+        path { fill: #ddd; stroke: #fff; stroke-width: 1; }
+    </style>
+</head>
+<body>
+
+    <h1>我的出遊亂亂走</h1>
+    <p>點擊縣市查看我的旅遊足跡</p>
+
+    <div class="map-container">
+        <!-- 這裡放入你的 SVG 程式碼 -->
+        <svg viewBox="0 0 500 800">
+            <!-- 範例：高雄市的區塊 -->
+            <path id="kaohsiung" d="..." onclick="location.href='kaohsiung.html'" />
+            <!-- 範例：台南市的區塊 -->
+            <path id="tainan" d="..." onclick="location.href='tainan.html'" />
+            <!-- 其他縣市... -->
+        </svg>
+    </div>
+
+</body>
+</html>
